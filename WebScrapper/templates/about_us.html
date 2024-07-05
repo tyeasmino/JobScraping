@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+{% block title %} About Us {% endblock title %}
+
+
+{% block body %}  
+    <div class="about_us_container"> <br> 
+        <div class="container">
+            <div class="scrapped_card">   
+                <form action="" method="POST" class="p-2 mb-2 bg-dark border-bottom border-dark">
+                    {% csrf_token %} 
+                    <input name="title" type="search" class="form-control form-control-dark" autocomplete="false" placeholder="Type to filter..." spellcheck="false" data-ms-editor="true">
+                </form>
+            </div>
+ 
+            <div class="row"> 
+                <div class="col-3 scrapped_card">
+                    <div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+                        <form class="p-2 mb-2 bg-dark border-bottom border-dark">
+                            <h3>Company Name</h3> 
+                        </form>
+                        
+                        <ul class="list-unstyled mb-0">
+                            {% for cname in company_name  %}                                 
+                                <li class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    {{ cname }}                                  
+                                </li> 
+                            {% endfor %}                            
+                        </ul>
+                    </div>
+                </div> 
+                <div class="col-4 scrapped_card">
+                    <div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+                        <form class="p-2 mb-2 bg-dark border-bottom border-dark">
+                            <h3>Skills</h3>  
+                        </form>
+                        
+                        <ul class="list-unstyled mb-0">
+                            {% for skill in skills  %}                                 
+                                <li class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    {{ skill }}                                   
+                                </li> 
+                            {% endfor %}                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 scrapped_card">
+                    <div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+                        <form class="p-2 mb-2 bg-dark border-bottom border-dark">
+                            <h3>Company Name</h3> 
+                        </form>
+                        <ul class="list-unstyled mb-0">
+                            {% for cname in company_name  %}                                 
+                                <li class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    {{ cname }}                                  
+                                </li>  
+                            {% endfor %}                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1 scrapped_card">
+                    <div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+                        <form class="p-2 mb-2 bg-dark border-bottom border-dark">
+                            <h3>More</h3>  
+                        </form>
+                        <ul class="list-unstyled mb-0"> 
+                            {% for more in more_info  %}   
+                                <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" target="_blank"  href="{{ more }}">
+                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    See Details 
+                                </a></li>                               
+                            {% endfor %}                            
+                        </ul>
+                    </div>
+                </div>               
+            </div> 
+        </div>
+    </div> 
+{% endblock body %}  

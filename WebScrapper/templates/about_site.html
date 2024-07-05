@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% block title %} About Site {% endblock title %}
+{% block body %}  
+    <div class="p-0 m-0"> 
+        <div class="container"> <br> <br>           
+          <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+            <ul class="list-unstyled mb-0"> 
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python ">
+                <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                Here I have scraped data from - <br> https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python 
+              </a></li> 
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+                Assumed That I am searching a job for python. The keyword 'python' is mentioned here. 
+              </a></li> 
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+                Filtered the scraped data with two conditions   
+                <ol style="margin-left: 50px">  
+                  <li>Find all the jobs that posted before few days. </li>
+                  <li>Main and important part is here I have entered a keyword like skill that I don't know... </li>
+                </ol>
+              </a>
+                 
+              </li>
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle p-1"></span>
+                Finally saved the scraped data in a csv file with the name of given skill 
+              </a></li>
+            </ul>
+          </div>
+        </div> 
+    </div>
+{% endblock body %} 
+ 

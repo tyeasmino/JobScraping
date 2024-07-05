@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% block title %} Sign In {% endblock title %}
+{% block body %}  
+    <div class="p-0 m-0">
+        <div class="container">
+          <div class="login-root">
+            <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+              
+              <div class="box-root  flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                  <div class="box-root padding-top--48   flex-flex flex-justifyContent--center">
+                  
+                  </div>
+                  <div class="formbg-outer">
+                  <div class="formbg"> 
+                      <div class="formbg-inner padding-horizontal--48">
+                      <span class="padding-bottom--15">Sign in to your account</span>
+                      <form id="stripe-login" method="POST" action="/signin" >
+                        {% csrf_token %} 
+                          <div class="field padding-bottom--24">
+                          <label for="username">Username</label>
+                          <input type="text" name="username"> 
+                          </div>
+                          <div class="field padding-bottom--24">
+                          <div class="grid--50-50">
+                              <label for="password">Password</label>
+                          </div>
+                          <input type="password" name="password">
+                          </div>
+                          <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                          <label for="checkbox">
+                              <input type="checkbox" name="checkbox"> Stay signed in for a week
+                          </label>
+                          </div> 
+                          <div class="field padding-bottom--24">
+                          <input type="submit" name="submit" value="Sign in"> 
+                          </div>
+                      </form>
+                      </div>
+                  </div>
+            
+                  </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+    </div>
+{% endblock body %} 
+ 
